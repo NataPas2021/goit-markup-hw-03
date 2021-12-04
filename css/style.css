@@ -3,8 +3,10 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --paragraph-color: #757575;
+  --backgr-color-team: #f5f4fa;
   --main-font: 'Roboto', 'sans-serif';
   --logo-font: 'Raleway', 'sans-serif';
+  --card-set-gap: 30px;
 }
 
 body {
@@ -19,10 +21,34 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-ul a {
+li a {
+  padding: 0;
+  margin: 0;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .logo {
@@ -35,6 +61,9 @@ ul a {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--title-text-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 }
 
 .logo-first {
@@ -47,34 +76,81 @@ ul a {
   color: var(--background-color);
 }
 
-.site-nav.list {
-  font-family: inherit;
-  text-decoration: none;
+/*----------------Utilites--------------*/
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.navigation {
+.link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
 
-.navigation:hover,
-.navigation:focus {
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/*--------------Header nav + contacts--------------*/
+
+/* .container.header {
+  display: flex;
+  align-items: center;
+} */
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav.link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
   color: var(--accent-color);
 }
 
 .active {
   color: var(--accent-color);
 }
+
+.contact-info {
+  margin-left: auto;
+}
+
+.contact-info.link {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info.link .mail {
+  margin-left: auto;
+}
+
 .mail,
 .telephone {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--paragraph-color);
 }
 
 .mail:hover,
@@ -84,13 +160,15 @@ ul a {
   color: var(--accent-color);
 }
 
-/*Герой*/
+/*------------Герой-------------------*/
 
 .hero {
   background: #2f303a;
+  text-align: center;
 }
 
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -101,9 +179,15 @@ ul a {
 }
 
 .hero-button {
+  display: inline-block;
   font-family: var(--main-font);
   background: var(--accent-color);
   color: var(--background-color);
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  align-items: center;
+  border: 1px solid transparent;
 }
 
 .hero-button:hover,
@@ -111,9 +195,11 @@ ul a {
   cursor: pointer;
 }
 
-/*Наши преимущества*/
+/*------------------Наши преимущества----------------*/
 
 .advantages-title {
+  margin-bottom: 10px;
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -122,14 +208,54 @@ ul a {
   color: var(--title-text-color);
 }
 
+.item-advantages {
+  margin-left: 30px;
+}
+
 .advantages-text {
+  font-family: var(--main-font);
+  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
 }
 
+.container.advantages {
+  display: flex;
+  margin-top: o;
+}
+
+.container.about-us {
+  display: flex;
+}
+
+.about-us .item-activity + .item-activity {
+  margin-left: 30px;
+}
+
+.about-us {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-team {
+  background-color: var(--backgr-color-team);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* Наша команда*/
+
+.container.team {
+  background-color: var(--backgr-color-team);
+  text-align: center;
+}
+
+.list-team {
+  display: flex;
+}
 
 .about-us,
 .our-team {
@@ -137,9 +263,24 @@ ul a {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.list-team .employees + .employees {
+  margin-left: 30px;
+}
+
+.employees,
+.our-team {
+  text-align: center;
+}
+
+.item-photo {
+  margin-bottom: 30px;
 }
 
 .team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -153,13 +294,17 @@ ul a {
   color: var(--paragraph-color);
 }
 
-/*Footer*/
-.footer {
+/*-----------------Footer---------------------*/
+.section-footer {
   background: #2f303a;
   color: var(--background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -175,18 +320,37 @@ ul a {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.address-physical {
+  margin-bottom: 9px;
+}
+
+.item-footer:not(:last-child) {
+  margin-bottom: 9px;
+}
 
 .mail-footer,
 .telephone-footer {
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 9px;
+}
+
+.telephone-footer {
+  margin-bottom: 0;
 }
 
 /*Page 2*/
 
 /*Фильтр*/
 
+.container.list-filtr {
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .filtr {
   font-family: var(--main-font);
+  margin-left: 8px;
   background: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
@@ -194,6 +358,10 @@ ul a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: 1px solid transparent;
 }
 
 .filtr:hover,
@@ -204,6 +372,26 @@ ul a {
 }
 
 /*Наши проекты*/
+
+.container.list-filtr {
+  justify-content: center;
+}
+.item-button {
+  text-align: center;
+}
+
+.list-projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.list-projects > .item-project {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
 
 .project-name {
   font-weight: 700;
@@ -217,4 +405,14 @@ ul a {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
+  margin-top: 4px;
+}
+
+.card-content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+
+.item-project {
+  box-shadow: ;
 }
