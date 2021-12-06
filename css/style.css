@@ -93,10 +93,6 @@ img {
   color: var(--title-text-color);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 /*--------------Header nav + contacts--------------*/
 
@@ -204,6 +200,7 @@ img {
 .section.our-advantages {
   padding-bottom: 0;
 }
+
 /*------------------Наши преимущества----------------*/
 
 .advantages-title {
@@ -275,9 +272,6 @@ img {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-}
-
-.about-us {
   margin-bottom: 50px;
 }
 
@@ -294,8 +288,6 @@ img {
 .our-team {
   text-align: center;
 }
-
-
 
 .team-card {
   padding-top: 30px;
@@ -318,6 +310,7 @@ img {
 }
 
 /*-----------------Footer---------------------*/
+
 .section-footer {
   background: #2f303a;
   color: var(--background-color);
@@ -343,6 +336,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
 .address-physical {
   margin-bottom: 9px;
 }
@@ -361,9 +355,9 @@ img {
   margin-bottom: 0;
 }
 
-/*Page 2*/
+/*-----------------Page 2-----------------*/
 
-/*Фильтр*/
+/*-----------Фильтр------------*/
 
 .container.list-filtr {
   display: flex;
@@ -381,13 +375,8 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
- 
   border-radius: 4px;
   border: 1px solid transparent;
-}
-
-.item-button:first-child {
-  margin-left: 0;
 }
 
 .filtr:hover,
@@ -416,6 +405,12 @@ img {
   align-items: center;
   border: 1px solid transparent;
 }
+
+.item-button:first-child {
+  margin-left: 0;
+}
+
+/*------------Наши проекты-------------*/
 
 .list-projects {
   display: flex;
@@ -449,5 +444,3 @@ img {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
-
-
